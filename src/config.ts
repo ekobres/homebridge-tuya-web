@@ -17,6 +17,8 @@ export type TuyaDeviceDefaults = {
   max_brightness: string | number;
   min_kelvin: string | number;
   max_kelvin: string | number;
+  min_raw_temp: string | number;
+  max_raw_temp: string | number;
 };
 
 type Config = {
