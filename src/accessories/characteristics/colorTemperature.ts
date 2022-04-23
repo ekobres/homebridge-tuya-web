@@ -41,6 +41,16 @@ export class ColorTemperatureCharacteristic extends TuyaWebCharacteristic {
     const data = this.accessory.deviceConfig.config;
     return Number(data?.max_kelvin) || 1000000 / 140;
   }
+  
+  public get minRawTemp(): number {
+    const data = this.accessory.deviceConfig.config;
+    return Number(data?.min_raw_temp) || this.minKelvin;
+  }
+
+  public get maxRawTemp(): number {
+    const data = this.accessory.deviceConfig.config;
+    return Number(data?.max_raw_temp) || this.maxKelvin;
+  }
 
   public get minHomekit(): number {
     return 1000000 / this.maxKelvin;
@@ -50,11 +60,11 @@ export class ColorTemperatureCharacteristic extends TuyaWebCharacteristic {
     return 1000000 / this.minKelvin;
   }
 
-  public rangeMapper = MapRange.tuya(this.maxKelvin, this.minKelvin).homeKit(
+  public rangeMapper = MapRange.tuya(this.maxRawTemp, this.minRawTemp).homeKit(
     this.minHomekit,
     this.maxHomekit
   );
-
+  
   public getRemoteValue(callback: CharacteristicGetCallback): void {
     this.accessory
       .getDeviceState()
