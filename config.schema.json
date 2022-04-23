@@ -165,14 +165,28 @@
               "title": "Minimal Kelvin",
               "type": "string",
               "pattern": "^-?\\d+$",
-              "description": "The kelvin value that Tuya returns when your light is at its warmest (most red).",
+              "description": "The kelvin temperature when your light is at its warmest (most red).",
               "required": false
             },
             "max_kelvin": {
               "title": "Maximal Kelvin",
               "type": "string",
               "pattern": "^-?\\d+$",
-              "description": "The kelvin value that Tuya returns when your light is at its coolest (most blue).",
+              "description": "The kelvin temperature when your light is at its coolest (most blue).",
+              "required": false
+            },
+            "min_raw_temp": {
+              "title": "Minimal Raw Color Temp",
+              "type": "string",
+              "pattern": "^-?\\d+$",
+              "description": "The raw value that Tuya returns when your light is at its warmest (most red).",
+              "required": false
+            },
+            "max_raw_temp": {
+              "title": "Maximal Raw Color Temp",
+              "type": "string",
+              "pattern": "^-?\\d+$",
+              "description": "The raw value that Tuya returns when your light is at its coolest (most blue).",
               "required": false
             },
             "current_temperature_factor": {
