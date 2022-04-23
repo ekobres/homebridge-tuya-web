@@ -31,14 +31,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ekobres/homebridge-tuya-web"
+    "url": "https://github.com/milo526/homebridge-tuya-web"
   },
   "funding": {
     "type": "github",
     "url": "https://github.com/sponsors/milo526"
   },
   "bugs": {
-    "url": "https://github.com/ekobres/homebridge-tuya-web/issues"
+    "url": "https://github.com/milo526/homebridge-tuya-web/issues"
   },
   "dependencies": {
     "axios": "^0.24.0",
